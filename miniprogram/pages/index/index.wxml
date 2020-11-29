@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view>学号
+    <input class="input" name="stunum2" placeholder="请输入学号" 
+    bindinput="findstu"/>
+  </view> -->
+  <button class="tui-btn tui-btn-block tui-primary" hover-class="tui-primary-hover" bindtap="findddl">查询ddl</button>
+  <tui-divider  gradual="{{true}}"></tui-divider>
+  <view class='a' wx:for="{{ddl}}">
+    <tui-cell><view class="tui-badge-dot tui-warning tui-badge-small"></view>标题：{{item.title}}</tui-cell>
+    <tui-cell><view class="tui-badge-dot tui-green tui-badge-small"></view>时间：{{item.time}}</tui-cell>
+    <tui-cell><view>重要性:</view><tui-rate current="{{item.star}}" quantity="10"></tui-rate></tui-cell>
+    <tui-divider  gradual="{{true}}"></tui-divider>
+  </view>
+  <!-- <view>学号
+    <input class="input" name="stunum" placeholder="请输入学号" 
+    bindinput="stunum"/>
+  </view> -->
+    <tui-view title='DDl标题'><tui-cell><input class="input" name="title" placeholder="请输入ddl标题" 
+    bindinput="title" value="{{name}}"/></tui-cell></tui-view>
+
+    <tui-view title='DDl时间' bindtap="show"><tui-cell ><view >DDL时间 ：{{time}}</view></tui-cell></tui-view>
+
+    <tui-view title='DDl重要性'><tui-cell><view class="tui-rate-box">
+    <tui-rate current="{{index}}" quantity="10" bind:change="change"></tui-rate>
+    </view></tui-cell></tui-view>
+  <tui-divider  gradual="{{true}}"></tui-divider>
+  <button class="tui-btn tui-btn-block tui-primary" hover-class="tui-primary-hover" bindtap="findtime">查询当前时间</button>
+  <tui-cell><view class="tui-badge-dot tui-green tui-badge-small"></view>与今天距离：{{abcd}}天</tui-cell>
+  <tui-divider  gradual="{{true}}"></tui-divider>
+  <button class="tui-btn tui-btn-block tui-primary" hover-class="tui-primary-hover" bindtap="addddl">增加DDL</button>
+  <tui-datetime id="tui-dateTime-ctx" type="{{type}}" startYear="{{startYear}}" endYear="{{endYear}}" cancelColor="{{cancelColor}}" color="{{color}}"
+		 setDateTime="{{setDateTime}}" bindconfirm="change3"></tui-datetime>
+
+
+</view>
+<button bindtap="getopenid">获取用户openID</button>
+<button bindtap="shouquan">授权</button>
+<button bindtap="tuisong">推送消息</button>
+

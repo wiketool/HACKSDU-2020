@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#00FF00",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "DDL 小猪手",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {
+    "tui-button": "/components/button/button",
+    "tui-cell":"/components/list-cell/list-cell",
+    "tui-view":"/components/list-view/list-view",
+    "tui-divider":"/components/divider/divider",
+    "tui-rate":"/components/rate/rate",
+    "tui-icon": "components/icon/icon",
+    "tui-datetime":"../../../../components/dateTime/dateTime"
+  }
+}
